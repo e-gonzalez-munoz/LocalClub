@@ -1,4 +1,4 @@
-/* Reset some default styles */
+/* Reset some default styles and pply a background color and apply some basic styling to the entire page */
 html {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -18,8 +18,6 @@ ul {
     padding: 0;
     list-style: none;
 }
-
-/* Apply a background color and some basic styling to the entire page */
 
 /* Style the banner section */
 .banner {

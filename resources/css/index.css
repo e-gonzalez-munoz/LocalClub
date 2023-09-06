@@ -1,10 +1,9 @@
-/* Set a root font size for rem units (typically 16px is used as a base) */
+/* Reset some default styles */
 html {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
 
-/* Apply a background color and some basic styling to the entire page */
 body {
     background-color: #f5f5f5;
     line-height: 1.6;
@@ -13,11 +12,14 @@ body {
     padding: 0;
 }
 
-body, ul {
+body,
+ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
+/* Apply a background color and some basic styling to the entire page */
 
 /* Style the banner section */
 .banner {
@@ -26,6 +28,7 @@ body, ul {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    grid-template-rows: auto auto;
 }
 
 .banner img {
@@ -35,11 +38,11 @@ body, ul {
 
 .banner-text {
     position: absolute;
-    bottom: 1.25rem; /* 20px converted to rem */
-    left: 1.25rem; /* 20px converted to rem */
+    bottom: 20px;
+    left: 20px;
     background-color: rgba(255, 255, 255, 0.7);
-    padding: 0.625rem; /* 10px converted to rem */
-    border-radius: 0.3125rem; /* 5px converted to rem */
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .banner h1 {
@@ -61,7 +64,7 @@ nav ul {
 }
 
 nav li {
-    margin: 0 1.25rem; /* 20px converted to rem */
+    margin: 0 20px;
 }
 
 nav a {
@@ -71,20 +74,67 @@ nav a {
     font-size: 1.2rem;
 }
 
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+
+    /* Ensure that the navigation and banner text are below the banner image */
+    .banner {
+        grid-template-rows: auto auto auto;
+        /* Set the banner to take up all available space */
+    }
+
+    .banner-text {
+        position: relative;
+        /* Change position to relative to stay in the flow of the document */
+        bottom: auto;
+        /* Reset the bottom position */
+        left: auto;
+        /* Reset the left position */
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .banner h1,
+    .banner p {
+        text-align: center;
+    }
+
+    /* Adjust the navigation styles for small screens */
+    nav {
+        position: static;
+        /* Reset the position to the normal flow */
+        background-color: #333;
+        display: block;
+        /* Change display to block to stack navigation items */
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 10px 10px;
+        /* Add vertical margin between navigation items */
+    }
+}
+
 /* Style the main content sections */
 section {
     background-color: white;
-    padding: 1.25rem; /* 20px converted to rem */
-    margin: 1.25rem; /* 20px converted to rem */
-    border-radius: 0.3125rem; /* 5px converted to rem */
-    box-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.2); /* 5px converted to rem */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Style the images inside the sections */
 section img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 0.625rem; /* 10px converted to rem */
+    margin-bottom: 10px;
 }
 
 /* Style the footer */
@@ -92,27 +142,33 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 0.625rem 0; /* 10px converted to rem */
-    grid-area: footer; /* Add grid-area to footer */
+    padding: 10px 0;
+    grid-area: footer;
+    /* Add grid-area to footer */
 }
 
 /* Apply grid layout to the main content sections */
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-    grid-template-rows: 1fr 1fr; /* Two equal-width rows */
-    gap: 1.25rem; /* 20px converted to rem */
+    grid-template-columns: 1fr 1fr;
+    /* Two equal-width columns */
+    grid-template-rows: 1fr 1fr;
+    /* Two equal-width rows */
+    gap: 20px;
+    /* Spacing between grid items */
 }
 
 .grid section {
-    padding: 1.25rem; /* 20px converted to rem */
+    padding: 20px;
     text-align: center;
-    background-color: #f4f4f4; /* Background color for each section */
+    background-color: #f4f4f4;
+    /* Background color for each section */
 }
 
-/* Media query with rem units for screens up to 48em wide (768px / 16px = 48em) */
-@media screen and (max-width: 48em) {
+/* Media query to make the grid responsive on smaller screens */
+@media screen and (max-width: 768px) {
     .grid {
-        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+        grid-template-columns: 1fr;
+        /* Single column layout on smaller screens */
     }
 }

@@ -1,0 +1,118 @@
+/* Set a root font size for rem units (typically 16px is used as a base) */
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+/* Apply a background color and some basic styling to the entire page */
+body {
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Style the banner section */
+.banner {
+    position: relative;
+    grid-area: banner;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 1.25rem; /* 20px converted to rem */
+    left: 1.25rem; /* 20px converted to rem */
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.625rem; /* 10px converted to rem */
+    border-radius: 0.3125rem; /* 5px converted to rem */
+}
+
+.banner h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Style the navigation */
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+nav li {
+    margin: 0 1.25rem; /* 20px converted to rem */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Style the main content sections */
+section {
+    background-color: white;
+    padding: 1.25rem; /* 20px converted to rem */
+    margin: 1.25rem; /* 20px converted to rem */
+    border-radius: 0.3125rem; /* 5px converted to rem */
+    box-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.2); /* 5px converted to rem */
+}
+
+/* Style the images inside the sections */
+section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.625rem; /* 10px converted to rem */
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.625rem 0; /* 10px converted to rem */
+    grid-area: footer; /* Add grid-area to footer */
+}
+
+/* Apply grid layout to the main content sections */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    grid-template-rows: 1fr 1fr; /* Two equal-width rows */
+    gap: 1.25rem; /* 20px converted to rem */
+}
+
+.grid section {
+    padding: 1.25rem; /* 20px converted to rem */
+    text-align: center;
+    background-color: #f4f4f4; /* Background color for each section */
+}
+
+/* Media query with rem units for screens up to 48em wide (768px / 16px = 48em) */
+@media screen and (max-width: 48em) {
+    .grid {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+}

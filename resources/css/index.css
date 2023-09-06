@@ -92,8 +92,8 @@ nav a {
         left: auto;
         /* Reset the left position */
         background-color: rgba(255, 255, 255, 0.7);
-        padding: 0.625rem; /* 10px converted to rem */
-        border-radius: 0.3125rem; /* 5px converted to rem */
+        padding: 0.625em; /* 10px converted to rem */
+        border-radius: 0.3125em; /* 5px converted to rem */
     }
 
     .banner h1,
@@ -116,8 +116,12 @@ nav a {
     }
 
     nav li {
-        margin: 0.625rem 0.625rem; /* 10px converted to rem */
+        margin: 0.625em 0.625em; /* 10px converted to rem */
         /* Add vertical margin between navigation items */
+    }
+
+    nav a {
+        font-size: 1.1em;
     }
 }
 

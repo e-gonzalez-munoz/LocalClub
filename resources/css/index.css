@@ -37,11 +37,11 @@ ul {
 
 .banner-text {
     position: absolute;
-    bottom: 1.25rem; /* 20px converted to rem */
-    left: 1.25rem; /* 20px converted to rem */
+    bottom: 5.50rem; 
+    left: 1.25rem; 
     background-color: rgba(255, 255, 255, 0.7);
-    padding: 0.625rem; /* 10px converted to rem */
-    border-radius: 0.3125rem; /* 5px converted to rem */
+    padding: 0.625rem; 
+    border-radius: 0.3125rem; 
 }
 
 .banner h1 {
@@ -63,7 +63,7 @@ nav ul {
 }
 
 nav li {
-    margin: 0 1.25rem; /* 20px converted to rem */
+    margin: 0 1.25rem; 
 }
 
 nav a {
@@ -91,8 +91,8 @@ nav a {
         left: auto;
         /* Reset the left position */
         background-color: rgba(255, 255, 255, 0.7);
-        padding: 0.625em; /* 10px converted to rem */
-        border-radius: 0.3125em; /* 5px converted to rem */
+        padding: 0.625em; 
+        border-radius: 0.3125em; 
     }
 
     .banner h1,
@@ -115,7 +115,7 @@ nav a {
     }
 
     nav li {
-        margin: 0.625em 0.625em; /* 10px converted to rem */
+        margin: 0.625em 0.625em;
         /* Add vertical margin between navigation items */
     }
 }
